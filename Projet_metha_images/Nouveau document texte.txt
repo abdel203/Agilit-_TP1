@@ -1,0 +1,197 @@
+
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+/**
+ * Classe-test animalTest.
+ *
+ * @author  (votre nom)
+ * @version (un numéro de version ou une date)
+ *
+ * Les classes-test sont documentées ici :
+ * http://junit.sourceforge.net/javadoc/junit/framework/TestCase.html
+ * et sont basées sur le document Š 2002 Robert A. Ballance intitulé
+ * "JUnit: Unit Testing Framework".
+ *
+ * Les objets Test (et TestSuite) sont associés aux classes à tester
+ * par la simple relation yyyTest (e.g. qu'un Test de la classe Name.java
+ * se nommera NameTest.java); les deux se retrouvent dans le męme paquetage.
+ * Les "engagements" (anglais : "fixture") forment un ensemble de conditions
+ * qui sont vraies pour chaque méthode Test à exécuter.  Il peut y avoir
+ * plus d'une méthode Test dans une classe Test; leur ensemble forme un
+ * objet TestSuite.
+ * BlueJ découvrira automatiquement (par introspection) les méthodes
+ * Test de votre classe Test et générera la TestSuite conséquente.
+ * Chaque appel d'une méthode Test sera précédé d'un appel de setUp(),
+ * qui réalise les engagements, et suivi d'un appel à tearDown(), qui les
+ * détruit.
+ */
+
+
+public class AnimalTest {
+
+    private animal animal1;
+    private animal animal2;
+
+    @BeforeEach
+    public void setUp() {
+        animal1 = new animal("chat", 5);
+        animal2 = new animal("chien", 4);
+    }
+
+    @AfterEach
+    public void tearDown() {
+        animal1 = null;
+        animal2 = null;
+    }
+
+    @Test
+    public void testNourrir() {
+        animal1.nourrir();
+        assertEquals(150, animal1.getEnergie());
+    }
+
+    @Test
+    public void testAttaquer() {
+        animal1.attaquer(animal2);
+        assertEquals(50, animal2.getEnergie());
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Décrivez votre classe Nourriture ici.
+ *
+ * @author (votre nom)
+ * @version (un numéro de version ou une date)
+ */
+public class Boost
+{
+    // variables d'instance - remplacez l'exemple qui suit par le vôtre
+    private int type;
+    private int energie;
+
+    /**
+     * Constructeur d'objets de classe Nourriture
+     */
+    public Boost(int ty)
+    {
+        type = ty;
+    }
+
+    
+    public int Boost_energie()
+    {
+        if (type == 1){
+            return 60;
+        }
+        else if (type == 2){
+            return 80;
+        }
+        else {
+            return 120;
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Décrivez votre classe animal ici.
+ *
+ * @author (votre nom)
+ * @version (un numéro de version ou une date)
+ */
+public class animal
+{
+    // variables d'instance - remplacez l'exemple qui suit par le vôtre
+    private String nom;
+    private int age ;
+    private int energie = 100;
+
+    /**
+     * Constructeur d'objets de classe animal
+     */
+    public animal(String n,int a)
+    {
+        nom = n;
+        age = a;
+    }
+
+    /**
+     * Un exemple de méthode - remplacez ce commentaire par le vôtre
+     *
+     * @param  y   le paramètre de la méthode
+     * @return     la somme de x et de y
+     */
+    public void afficherEnergie() {
+      System.out.println("Energie =" + this.energie);
+    }
+    public void nourrir(Boost boost){
+        energie += boost.Boost_energie();
+    }
+    public void attaquer(animal an){
+        an.energie-=50;
+    }
+    public int getEnergie(){
+        return this.energie;
+    }
+}
+
+
