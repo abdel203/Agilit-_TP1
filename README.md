@@ -17,7 +17,7 @@ Une classe intitulée `Animal` a été définie en premier lieu. Cette classe re
 
 Après sa création, elle a été compilée avec succès pour s'assurer de l'absence d'erreurs syntaxiques. Un premier objet nommé `animal1` a ensuite été instancié, permettant une visualisation directe dans BlueJ.
 
-!![ee](Projet_metha_images/Instancier_Classe.png)
+!![](Agilit-_TP1/Projet_metha_images/Instancier_Classe.png)
 !![](Projet_metha_images/Création_et_compilation_classe.png)
 
 ### Définition des Attributs et Méthodes
