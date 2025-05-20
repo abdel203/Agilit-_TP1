@@ -21,7 +21,7 @@ Examples:
   Given un animal avec une énergie initiale de <energie_initiale> 
   And un boost avec un type <type_boost> invalide
   When l'animal reçoit le boost 
-  Then le système refuse avec le
+  Then le système refuse avec le message d’erreur
 
   Examples:
   | energie_initiale | type_boost | messageErreur            |
