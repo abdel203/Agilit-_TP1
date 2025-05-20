@@ -4,7 +4,6 @@
 
 Ce rapport détaille le processus complet de création, d'instanciation et de test d'une application Java simple à l'aide de l'environnement de développement BlueJ. Il présente également l'interaction entre deux classes (`Animal` et `Boost`).
 
----
 
 ## Étapes de Développement
 
@@ -18,7 +17,8 @@ Une classe intitulée `Animal` a été définie en premier lieu. Cette classe re
 
 Après sa création, elle a été compilée avec succès pour s'assurer de l'absence d'erreurs syntaxiques. Un premier objet nommé `animal1` a ensuite été instancié, permettant une visualisation directe dans BlueJ.
 
----
+!![](Projet_metha_images/Instancier_Classe.png)
+!![](Projet_metha_images/Création_et_compilation_classe.png)
 
 ### Définition des Attributs et Méthodes
 
@@ -28,6 +28,8 @@ La classe `Animal` a été enrichie par trois attributs principaux :
 - `age` (int)
 - `energie` (int, initialement 100)
 
+!![](Projet_metha_images/variable_animal.png)
+
 Des méthodes spécifiques ont été ajoutées pour interagir avec ces attributs :
 
 - `afficherEnergie()` : affiche l'énergie actuelle.
@@ -35,19 +37,19 @@ Des méthodes spécifiques ont été ajoutées pour interagir avec ces attributs
 - `attaquer(Animal an)` : diminue l'énergie d'un autre animal.
 - `getEnergie()` : accesseur retournant l'énergie courante.
 
----
+!![](Projet_metha_images/animal_methode.png)
 
 ### Exécution Interactive
 
 Une instanciation interactive de la méthode `nourrir` a permis d'observer directement son effet sur l'état interne de l'objet. Après exécution, l'énergie initiale (100) de l'animal est passée à 150, confirmant le bon fonctionnement de la méthode.
 
----
+!![](Projet_metha_images/nourrir_effet.png)
 
 ### Tests Unitaires et Validation
 
 Des tests unitaires (`testAttaquer()` et `testNourrir()`) ont été créés à l'aide de l'environnement de test de BlueJ. Leur exécution réussie, indiquée par une barre verte, a validé le comportement attendu des méthodes.
 
----
+!![](Projet_metha_images/Tester_methode_classe.png)
 
 ### Ajout d'une Classe Associée « Boost »
 
@@ -61,7 +63,8 @@ Et une méthode principale :
 
 La classe `Animal` collabore avec `Boost` via la méthode `nourrir(Boost boost)`, qui utilise directement la valeur retournée par `Boost_energie()`.
 
----
+!![](Projet_metha_images/boost_variable.png)
+!![](Projet_metha_images/boost_methodes.png)
 
 ### Utilisation des Fixtures dans les Tests Unitaires
 
@@ -72,7 +75,8 @@ Pour garantir la reproductibilité des tests, une fixture `setUp()` a été déf
 
 Tous les tests utilisant cette fixture ont abouti à un succès, confirmé par une barre verte.
 
----
+!![](Projet_metha_images/Test_fixture(13).png)
+!![](Projet_metha_images/Question_12.png)
 
 ## Table des matières
 
