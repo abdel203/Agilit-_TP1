@@ -5,7 +5,7 @@ Feature: Gestion énergie Animal avec Boost et Attaque
   Et permettre aux animaux d’interagir entre eux via des attaques
   Afin de modéliser dynamiquement les changements d'énergie dans un système de simulation
 
-Scenario Outline: odification de l'énergie par Boost 
+Scenario Outline: Modification de l'énergie par Boost 
 Given un animal avec une énergie initiale de <energie_initiale> 
 And un boost de type <type_boost> 
 When l'animal reçoit le boost 
