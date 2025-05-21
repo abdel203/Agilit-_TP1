@@ -78,14 +78,29 @@ Tous les tests utilisant cette fixture ont abouti à un succès, confirmé par u
 !![](Projet_metha_images/Test_fixture(13).png)
 !![](Projet_metha_images/Question_12.png)
 
-## Table des matières
 
-- [Introduction](#introduction)
-- [Étapes de Développement](#étapes-de-développement)
-  - [Création du Projet](#création-du-projet)
-  - [Création de la Classe « Animal »](#création-de-la-classe-animal)
-  - [Définition des Attributs et Méthodes](#définition-des-attributs-et-méthodes)
-  - [Exécution Interactive](#exécution-interactive)
-  - [Tests Unitaires et Validation](#tests-unitaires-et-validation)
-  - [Ajout d'une Classe Associée « Boost »](#ajout-dune-classe-associée-boost)
-  - [Utilisation des Fixtures dans les Tests Unitaires](#utilisation-des-fixtures-dans-les-tests-unitaires)
+
+
+# 🐾Projet Animal Boost – BDD avec Behave
+
+Ce projet simule des animaux capables de recevoir de l’énergie via des boosts, ou de se battre.  
+On y applique le **BDD (Behavior Driven Development)** avec [Behave](https://behave.readthedocs.io/).
+
+pour :
+
+- Gérer l'énergie d’un animal.
+- Appliquer un boost selon son type (1, 2, 3).
+- Permettre à un animal d’en attaquer un autre.
+- Tester tout ça avec des **scénarios en langage naturel**.
+
+---
+
+##  Arborescence
+
+```bash
+ProjetAnimalBoost/
+├── main.py                      # Classes métier
+└── features/
+    ├── gestion_energie.feature  # Scénarios BDD
+    └── steps/
+        └── steps_gestion_energie.py  # Étapes Python
