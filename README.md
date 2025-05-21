@@ -126,7 +126,7 @@ Feature: Gestion énergie Animal avec Boost et Attaque
 2 features passed, 0 failed
 7 scenarios passed, 0 failed
 
-#En resumé :
+### Resumé :
 
 Chaque scénario a été exécuté avec succès, validant les comportements suivants :
 
