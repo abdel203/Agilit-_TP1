@@ -104,3 +104,33 @@ ProjetAnimalBoost/
     ├── gestion_energie.feature  # Scénarios BDD
     └── steps/
         └── steps_gestion_energie.py  # Étapes Python
+
+##  Test avec Behave
+
+Les scénarios de test ont été définis en Gherkin dans le fichier `gestion_energie.feature`. Chaque scénario décrit un comportement attendu du système : augmentation de l’énergie après un boost, ou réduction de l’énergie après une attaque.
+
+Les étapes correspondantes ont été implémentées dans `steps/steps_gestion_energie.py` à l’aide de la syntaxe `@given`, `@when`, `@then` de Behave, et sont directement reliées aux classes métier `Animal` et `Boost` définies dans `main.py`.
+
+###  Exécution des tests
+
+Les tests ont été lancés avec la commande suivante :
+
+```bash
+behave
+
+Feature: Gestion énergie Animal avec Boost et Attaque
+  Scenario Outline: Modification de l'énergie par Boost     ✅ Passed
+  Scenario Outline: Attaque entre deux animaux              ✅ Passed
+
+2 features passed, 0 failed
+7 scenarios passed, 0 failed
+
+#En resumé :
+
+Chaque scénario a été exécuté avec succès, validant les comportements suivants :
+
+    Le type de boost détermine l'énergie ajoutée à l’animal (60, 80, 120 selon le type 1, 2 ou 3).
+
+    Une attaque diminue systématiquement l’énergie de l’animal ciblé de 50 points.
+
+    Les énergies finales obtenues correspondent aux valeurs attendues dans les scénarios.
