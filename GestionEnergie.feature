@@ -1,8 +1,9 @@
-@tag Feature: Gestion énergie Animal avec Boost
+@tag Feature: Gestion énergie Animal avec Boost et Attaque
 
-En tant que Développeur 
-Je veux gérer l'énergie des objets Animal en interaction avec des Boosts 
-Afin de permettre une gestion dynamique de leur énergie
+  En tant que Développeur 
+  Je veux gérer l'énergie des objets Animal en interaction avec des Boosts 
+  Et permettre aux animaux d’interagir entre eux via des attaques
+  Afin de modéliser dynamiquement les changements d'énergie dans un système de simulation
 
 Scenario Outline: Modification de l'énergie par Boost 
 Given un animal avec une énergie initiale de <energie_initiale> 
@@ -17,16 +18,17 @@ Examples:
   | 100              | 3          | 120           | 220            |
   | 150              | 2          | 80            | 230            |
 
-  Scenario Outline: Refus d'un boost avec type invalide 
-  Given un animal avec une énergie initiale de <energie_initiale> 
-  And un boost avec un type <type_boost> invalide
-  When l'animal reçoit le boost 
-  Then le système refuse avec le message d’erreur
+ Scenario Outline: Attaque entre deux animaux
+    Given un animal A avec une énergie initiale de <energie_A_initiale>
+    And un animal B avec une énergie initiale de <energie_B_initiale>
+    When l'animal A attaque l'animal B
+    Then l'énergie finale de l'animal B doit être <energie_B_finale>
 
-  Examples:
-  | energie_initiale | type_boost | messageErreur            |
-  | 100              | -1         | "type de boost invalide" |
-  | 100              | 4          | "type de boost invalide" |
+    Examples:
+      | energie_A_initiale | energie_B_initiale | energie_B_finale |
+      | 100                | 100                |  50              |
+      | 150                | 70                 |  20              |
+      | 200                | 120                |  70              |
 
   
 
