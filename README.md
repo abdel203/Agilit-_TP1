@@ -91,9 +91,16 @@ pour :
 - Gérer l'énergie d’un animal.
 - Appliquer un boost selon son type (1, 2, 3).
 - Permettre à un animal d’en attaquer un autre.
-- Tester tout ça avec des **scénarios en langage naturel**.
+- Tester tout ça.
 
 ---
+
+## Histoire du projet
+
+Dans un univers d’animaux, chaque créature vit en équilibre avec son énergie.  
+Certaines reçoivent des boosts pour devenir plus puissantes. D’autres choisissent de se battre pour survivre.  
+
+Le défi : simuler ce monde avec du code, tout en s’assurant que chaque règle de comportement (gain d’énergie, combat, perte) fonctionne parfaitement.  
 
 ##  Arborescence
 
