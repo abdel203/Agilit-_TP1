@@ -5,18 +5,18 @@
   Et permettre aux animaux d’interagir entre eux via des attaques
   Afin de modéliser dynamiquement les changements d'énergie dans un système de simulation
 
-Scenario Outline: Modification de l'énergie par Boost 
+Scenario Outline: odification de l'énergie par Boost 
 Given un animal avec une énergie initiale de <energie_initiale> 
-And un boost de type <type_boost> avec énergie <energie_boost> 
+And un boost de type <type_boost> 
 When l'animal reçoit le boost 
 Then l'énergie finale de l'animal doit être égale à <energie_finale>
 
 Examples:
-  | energie_initiale | type_boost | energie_boost | energie_finale |
-  | 100              | 1          | 60            | 160            |
-  | 100              | 2          | 80            | 180            |
-  | 100              | 3          | 120           | 220            |
-  | 150              | 2          | 80            | 230            |
+  | energie_initiale | type_boost | energie_finale |
+  | 100              | 1          | 160            |
+  | 100              | 2          | 180            |
+  | 100              | 3          | 220            |
+  | 150              | 2          | 230            |
 
  Scenario Outline: Attaque entre deux animaux
     Given un animal A avec une énergie initiale de <energie_A_initiale>
