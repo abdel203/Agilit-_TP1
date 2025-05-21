@@ -104,6 +104,7 @@ ProjetAnimalBoost/
     ├── gestion_energie.feature  # Scénarios BDD
     └── steps/
         └── steps_gestion_energie.py  # Étapes Python
+```
 
 ##  Test avec Behave
 
@@ -117,7 +118,7 @@ Les tests ont été lancés avec la commande suivante :
 
 ```bash
 behave
-
+```
 Feature: Gestion énergie Animal avec Boost et Attaque
   Scenario Outline: Modification de l'énergie par Boost     ✅ Passed
   Scenario Outline: Attaque entre deux animaux              ✅ Passed
