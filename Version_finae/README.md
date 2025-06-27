@@ -68,7 +68,7 @@ Ces tests vérifient :
   Après avoir lancé la commande :
 ```bash
 behave
-
+```
 on obtient la sortie suivante, attestant que toutes les étapes passent :
 ![Test fonctionnels](images/Test_fonc.png)
 
