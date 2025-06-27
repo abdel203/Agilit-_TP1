@@ -70,7 +70,7 @@ Ces tests vérifient :
 behave
 
 on obtient la sortie suivante, attestant que toutes les étapes passent :
-![Test fonctionnels(images/Test_fonc.png)
+![Test fonctionnels](images/Test_fonc.png)
 
 ### ✅ 2. Tests unitaires (avec unittest)
 
@@ -90,7 +90,7 @@ En exécutant :
 python3 -m unittest tests/test_animaux.py
 ```
 on constate que tous les tests unitaires sont OK.
-![Test unitaires(images/Test_uni.png)
+![Test unitaires](images/Test_uni.png)
 
 ## 👨‍🎓 Auteur
 
