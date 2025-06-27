@@ -1,4 +1,4 @@
-# 🐾 Simulation Sociale d'Animaux – Projet Fusionné
+# 🐾 Simulation Sociale d'Animaux 
 
 Ce projet simule un environnement dans lequel des animaux interagissent entre eux tout en partageant leurs actions à travers un système de réseau social intégré.  
 Chaque animal peut effectuer des actions comme se nourrir à l’aide de boosts, attaquer d’autres animaux ou publier des messages.  
@@ -46,8 +46,7 @@ Version_finale/
 ├── tests/                       ← Tests unitaires Python (unittest)
 │   └── test_animaux.py
 │
-├── README.md                    ← ✅ Ce fichier
-└── requirements.txt             ← (facultatif) Dépendances à installer
+├── README.md                    
 ```
 
 ---
@@ -66,6 +65,13 @@ Ces tests vérifient :
 - Que les publications sont générées correctement
 - Que les messages manuels sont affichés dans le fil
 
+  Après avoir lancé la commande :
+```bash
+behave
+
+on obtient la sortie suivante, attestant que toutes les étapes passent :
+![Test fonctionnels(images/Test_fonc.png)
+
 ### ✅ 2. Tests unitaires (avec unittest)
 
 ```bash
@@ -79,8 +85,12 @@ Ces tests couvrent :
 - La gestion d'une erreur de boost invalide
 
 ---
-
-
+En exécutant :
+```bash
+python3 -m unittest tests/test_animaux.py
+```
+on constate que tous les tests unitaires sont OK.
+![Test unitaires(images/Test_uni.png)
 
 ## 👨‍🎓 Auteur
 
